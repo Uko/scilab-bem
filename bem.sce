@@ -1,5 +1,4 @@
 clear all;
-PI = 3.1415926535897931;    //LOL
 N = 300;                    //number of points(matrix will also be N  by N)
 x = 0:1/N:1;                //generate one extra point to be able to calculate i-1
 function y = f ( x )
@@ -30,7 +29,7 @@ for j=2:N+1
         
     end;
 end;
-a = a/(2*PI);   //divide by 2*PI
+a = a/(2*%pi);   //divide by 2*PI
 //</task1>
 
 y = (x(2:N+1)+x(1:N))/2;    //we will be plotting for middle points for each segment
@@ -41,7 +40,7 @@ plot(y,res);                //plot the result
 //<task2>
 a = zeros(N,N);         //reset matrix for task2
 function y = fx ( x )
-    y = (x+2)*PI/N;
+    y = (x+2)*%pi/N;
 endfunction             //define some function needed further in calculations
 for j=2:N+1
     for i=2:N+1
