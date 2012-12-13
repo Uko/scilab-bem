@@ -1,4 +1,4 @@
-clear all;
+clf();
 N = 300;                    //number of points(matrix will also be N  by N)
 x = 0:1/N:1;                //generate one extra point to be able to calculate i-1
 function y = f ( x )
@@ -35,6 +35,7 @@ a = a/(2*%pi);   //divide by 2*PI
 y = (x(2:N+1)+x(1:N))/2;    //we will be plotting for middle points for each segment
 g = f(y);                   //generate vector from input function
 res = g*inv(a);             //calc gaussian
+subplot(121);
 plot(y,res);                //plot the result
 
 //<task2>
@@ -54,4 +55,5 @@ a = a*2/N*N;
 
 
 res = g*inv(a);             //calc gaussian
+subplot(122);
 plot(y,res);                //plot the result
