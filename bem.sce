@@ -37,6 +37,8 @@ g = f(y);                   //generate vector from input function
 res = g*inv(a);             //calc gaussian
 subplot(121);
 plot(y,res);                //plot the result
+xgrid(1);
+xtitle('Завдання 1');
 
 //<task2>
 a = zeros(N,N);         //reset matrix for task2
@@ -57,3 +59,5 @@ a = a*2/N*N;
 res = g*inv(a);             //calc gaussian
 subplot(122);
 plot(y,res);                //plot the result
+xgrid(1);
+xtitle('Завдання 2');
